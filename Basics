@@ -1,0 +1,53 @@
+Command beginners
+
+NAVIGATION
+pwd = prnt working directory
+ls = lists all files and directories in wd
+cd = change directory - switches ot the directory you specify
+mkdir = make directory - creates new directory in wd
+touch = creates new file in wd
+
+LIST, COPY, MOVE, REMOVE
+ls-a = list all files including hidden files (.)(..)
+ls-l = list all contents of directory in long format (columns)
+ls-t = list directory and files in chronological order of time modified
+ls-alt = combination of listing options
+cp = copy file from directory
+cp *m.txt = copy all files that start with "m"
+cp * directory name/ = copies all files in the directory
+mv = move file into destination file / can also rename file (file to replace -> new file name)
+rm = remove file 
+rm-r = removes entire directory and all of its child directories
+
+REDIRECTION
+echo = echo command accepts string "Hello" as standard input and echoes the string "Hello" as standard output
+stdin = standard input
+stdout = standard output
+stderr = standard error
+cat = outputs contents of a file to the terminal 
+> = replaces command on right with what is requested on the left
+>> = appends command on left to what is already in left
+< = takes standard input from file on right and inputs it into the program on the left
+| = pipe that takes standard output of command on left and pipes it as stnadard input to the command on the right
+sort = sorts standard output in alphabetical order
+uniq = filters out adjacent duplicate lines in a file (does not filter out non-adjacent files)
+sort XXX.txt | uniq = sorts the list and then filters out duplicates
+grep = global regular expression print - searches files for lines that match a pattern and retunrns a result
+  grep Mount mountains.txt --> extracts lines that include "Mount" 
+grep -i = enables command to be case insensitive - can be "Mount" or "mount"
+grep -R = searches all files in a directory and outputs filenames and lines containing matched results. R stands for "recursive" 
+grep -Rl = searches all files in a directory and only outputs filenames and lines with matched results (not additive)
+sed = stream editor - search and replace function
+  s = substitute
+  g = global
+  $ sed 's/snow/rain/' --> substitute "snow" with "rain" (replaces only the first instance of "snow")
+  $ sed 's/snow/rain/g' --> adding "g" replaces all "snow" with "rain" 
+  
+ENVIRONMENT
+nano = opens nano text editor
+  $ nano hello.txt
+ctrl + O = opens the text editor in nano
+ctrl + X = exit nano (type in "clear" to exit)
+ctrl + G = opens a help menu
+clear = clears the terminal window
+^ = ctrl key
